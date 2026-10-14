@@ -946,20 +946,23 @@ section[id],h2[id]{scroll-margin-top:110px}
 <div><label for="bk-name" style="display: block; margin: 0 0 10px; font-size: 15px; font-weight: 600; color: #1A1D21">3. Your name</label><input id="bk-name" type="text" autocomplete="given-name" placeholder="Your first name" data-b-value="name" data-input="set_name" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 10px 14px; border: 1.5px solid #C9D0D6; border-radius: 10px; font: inherit; font-size: 16px; color: #1A1D21; background: #FFFFFF"></div>
 <div><label for="bk-email" style="display: block; margin: 0 0 10px; font-size: 15px; font-weight: 600; color: #1A1D21">Email</label><input id="bk-email" type="email" autocomplete="email" placeholder="you@email.com" data-b-value="email" data-input="set_email" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 10px 14px; border: 1.5px solid #C9D0D6; border-radius: 10px; font: inherit; font-size: 16px; color: #1A1D21; background: #FFFFFF"></div>
 <div><label for="bk-city" style="display: block; margin: 0 0 10px; font-size: 15px; font-weight: 600; color: #1A1D21">City you date in</label><input id="bk-city" type="text" autocomplete="address-level2" placeholder="e.g. New York" data-b-value="city" data-input="set_city" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 10px 14px; border: 1.5px solid #C9D0D6; border-radius: 10px; font: inherit; font-size: 16px; color: #1A1D21; background: #FFFFFF"></div>
+<div aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden"><label for="bk-website">Website</label><input id="bk-website" type="text" tabIndex="-1" autocomplete="off" data-input="set_hp"></div>
 <div><label for="bk-notes" style="display: block; margin: 0 0 10px; font-size: 15px; font-weight: 600; color: #1A1D21">Anything we should know? <span style="font-weight: 400; color: #5B6670">(optional)</span></label><textarea id="bk-notes" rows="3" placeholder="Your type, dealbreakers, schedule..." data-input="set_notes" style="width: 100%; box-sizing: border-box; padding: 10px 14px; border: 1.5px solid #C9D0D6; border-radius: 10px; font: inherit; font-size: 16px; color: #1A1D21; resize: vertical"></textarea></div>
 </div>
 <span data-if="showErr" style="display: contents"><p role="alert" style="margin: 0 0 14px; color: #A11D2F; font-size: 14px; font-weight: 600"><span data-text="errMsg"></span></p></span>
-<div style="display: flex; gap: 10px"><button type="button" data-on="back" style="display: inline-flex; justify-content: center; align-items: center; min-height: 52px; padding: 0 20px; border: 1.5px solid #C9D0D6; border-radius: 10px; background: #FFFFFF; color: #1A1D21; font: inherit; font-size: 16px; font-weight: 600; cursor: pointer">Back</button><button type="button" data-on="submit" style="display: inline-flex; justify-content: center; align-items: center; min-height: 52px; padding: 0 24px; border: 0; border-radius: 10px; background: #7A1E2E; color: #FFFFFF; font: inherit; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; flex: 1">Request my call</button></div>
+<div style="display: flex; gap: 10px"><button type="button" data-on="back" style="display: inline-flex; justify-content: center; align-items: center; min-height: 52px; padding: 0 20px; border: 1.5px solid #C9D0D6; border-radius: 10px; background: #FFFFFF; color: #1A1D21; font: inherit; font-size: 16px; font-weight: 600; cursor: pointer">Back</button><button type="button" data-on="submit" style="display: inline-flex; justify-content: center; align-items: center; min-height: 52px; padding: 0 24px; border: 0; border-radius: 10px; background: #7A1E2E; color: #FFFFFF; font: inherit; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; flex: 1"><span data-text="submitLabel"></span></button></div>
 <p style="margin: 12px 0 0; font-size: 13px; color: #5B6670">Your answers stay private and are only used to prepare your call.</p>
 </span>
 
 <span data-if="done" style="display: contents">
 <div style="text-align: center; padding: 10px 0 4px">
 <span aria-hidden="true" style="display: inline-flex; width: 64px; height: 64px; border-radius: 999px; background: #7A1E2E; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg></span>
-<p role="status" style="margin: 16px 0 6px; font-family: 'Bricolage Grotesque', sans-serif; font-size: 26px; font-weight: 700; letter-spacing: -0.02em">Almost done, <span data-text="nameText"></span></p>
+<p role="status" style="margin: 16px 0 6px; font-family: 'Bricolage Grotesque', sans-serif; font-size: 26px; font-weight: 700; letter-spacing: -0.02em"><span data-text="doneTitle"></span></p>
 <p style="margin: 0 auto 6px; max-width: 420px; color: #3A4550">Your requested time: <strong><span data-text="whenText"></span></strong>.</p>
-<p style="margin: 0 auto 20px; max-width: 420px; color: #3A4550">Send the request and we'll confirm with a calendar invite within 24 hours.</p>
+<p style="margin: 0 auto 20px; max-width: 420px; color: #3A4550"><span data-text="doneBody"></span></p>
+<span data-if="viaMail" style="display: contents">
 <a data-b-href="mailto" style="display: inline-flex; justify-content: center; align-items: center; min-height: 52px; padding: 0 24px; border: 0; border-radius: 10px; background: #7A1E2E; color: #FFFFFF; font: inherit; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none">Send my request</a>
+</span>
 <p style="margin: 14px 0 0"><button type="button" data-on="restart" style="border: 0; background: none; color: #5B6670; font: inherit; font-size: 14px; text-decoration: underline; cursor: pointer; min-height: 44px">Change my answers</button></p>
 </div>
 </span>
@@ -1049,9 +1052,12 @@ class DCLogic {
 }
 
 class Component extends DCLogic {
+  // Paste your Google Apps Script web app URL here to send requests straight to Gmail.
+  static SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyUksNjl8YVIXJJ9k42ft6fR1cgQfOcixDi0Z2IebzXx6s4rT9rkHAnjpGYkrHK4bQy/exec';
+
   constructor() {
     super();
-    this.state = { index: 0, mapOn: false, phone: 0, paused: false, menu: null, mobile: false, footOn: false, hours: 5, calOn: false, bk: { step: 0, mo: 0, day: '', time: -1, pkg: -1, bud: -1, apps: [], goal: -1, name: '', email: '', city: '', notes: '', err: '' } };
+    this.state = { index: 0, mapOn: false, phone: 0, paused: false, menu: null, mobile: false, footOn: false, hours: 5, calOn: false, bk: { step: 0, mo: 0, sent: 'idle', hp: '', day: '', time: -1, pkg: -1, bud: -1, apps: [], goal: -1, name: '', email: '', city: '', notes: '', err: '' } };
     this.cycle = null;
     this.phoneFind = null;
     this.raf = 0;
@@ -1281,6 +1287,7 @@ class Component extends DCLogic {
       set_email: (e) => setBk({ email: e.target.value }),
       set_city: (e) => setBk({ city: e.target.value }),
       set_notes: (e) => setBk({ notes: e.target.value }),
+      set_hp: (e) => setBk({ hp: e.target.value }),
       back: () => setBk({ step: Math.max(0, bk.step - 1), err: '' }),
       restart: () => setBk({ step: 0, err: '' }),
       next: () => {
@@ -1290,9 +1297,28 @@ class Component extends DCLogic {
       },
       submit: () => {
         if (!bk.name.trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(bk.email.trim())) return setBk({ err: 'Please add your name and a valid email.' });
-        setBk({ step: 3, err: '' });
+        const url = Component.SCRIPT_URL || '';
+        if (!url) { setBk({ step: 3, err: '', sent: 'mail' }); return; }
+        if (bk.sent === 'sending') return;
+        const tm = /(\d+):(\d+) (AM|PM)/.exec(TIMES[bk.time]);
+        let hr = parseInt(tm[1], 10) % 12; if (tm[3] === 'PM') hr += 12;
+        const start = new Date(selDate.getFullYear(), selDate.getMonth(), selDate.getDate(), hr, parseInt(tm[2], 10));
+        const payload = {
+          start: start.toISOString(), when: whenText, timezone: tzName,
+          plan: bk.pkg >= 0 ? PKGS[bk.pkg] : '', budget: bk.bud >= 0 ? BUDG[bk.bud] : '',
+          apps: bk.apps.map((i) => APPS[i]).join(', '), goal: bk.goal >= 0 ? GOALS[bk.goal] : '',
+          name: bk.name.trim(), email: bk.email.trim(), city: bk.city.trim(), notes: bk.notes.trim(), website: bk.hp || ''
+        };
+        setBk({ sent: 'sending', err: '' });
+        fetch(url, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) })
+          .then(() => this.setState({ bk: Object.assign({}, this.state.bk, { step: 3, sent: 'sent' }) }))
+          .catch(() => this.setState({ bk: Object.assign({}, this.state.bk, { sent: 'idle', err: 'Something went wrong. Please try again, or email us directly.' }) }));
       }
     };
+    bv.submitLabel = bk.sent === 'sending' ? 'Sending...' : 'Request my call';
+    bv.viaMail = bk.sent === 'mail';
+    bv.doneTitle = bk.sent === 'mail' ? 'Almost done, ' + (bk.name || 'there') : 'Request received, ' + (bk.name || 'there');
+    bv.doneBody = bk.sent === 'mail' ? "Send the request and we'll confirm with a calendar invite within 24 hours." : "We've emailed you a copy. We'll confirm with a calendar invite within 24 hours.";
     bv.monthLabel = first.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
     bv.prevMo = () => { if (bk.mo > 0) setBk({ mo: bk.mo - 1 }); };
     bv.nextMo = () => { if (bk.mo < 2) setBk({ mo: bk.mo + 1 }); };
